@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Change Maker</title>
+	<script type="text/javascript" src="scripts/jquery-1.8.2.min.js"></script>
+	<script>
+		$(document).ready(function () {
+  			$("#cash-register").text("The DOM is now loaded and can be manipulated.");
+		});
+	</script>
+</head>
+
+<body>
+	<form id=change-maker>
+    	<div id="cash-drawer">
+        	<h1>Cash Drawer</h1>
+            <fieldset>
+                <legend>Bills</legend>
+                <ol>
+                    <li>
+                        <label for=twenties>Twenties</label>
+                        <input id=twenties name=twenties type=number max="10" placeholder="How many?" autofocus>
+                    </li>
+                    <li>
+                        <label for=tens>Tens</label>
+                        <input id=tens name=tens type=number max="15" placeholder="How many?">
+                    </li>
+                    <li>
+                        <label for=fives>Fives</label>
+                        <input id=fives name=fives type=number max="20" placeholder="How many?">
+                    </li>
+                    <li>
+                        <label for=ones>Ones</label>
+                        <input id=ones name=ones type=number max="30" placeholder="How many?">
+                    </li>
+                </ol>
+            </fieldset>
+            <fieldset>
+                <legend>Coins</legend>
+                <ol>
+                    <li>
+                        <label for=dollars>Dollars</label>
+                        <input id=dollars name=dollars type=number max="10" placeholder="How many?" autofocus>
+                        <div id="subDollars" class="subAmt"></div>
+                    </li>
+                    <li>
+                        <label for=half-dollars>Half Dollars</label>
+                        <input id=half-dollars name=half-dollars type=number max="10" placeholder="How many?">
+                    </li>
+                    <li>
+                        <label for=quarters>Quarters</label>
+                        <input id=quarters name=quarters type=number max="20" placeholder="How many?">
+                    </li>
+                    <li>
+                        <label for=dimes>Dimes</label>
+                        <input id=dimes name=dimes type=number max="40" placeholder="How many?">
+                    </li>
+                    <li>
+                        <label for=nickels>Nickels</label>
+                        <input id=nickels name=nickels type=number max="40" placeholder="How many?">
+                    </li>
+                    <li>
+                        <label for=pennies>Pennies</label>
+                        <input id=pennies name=pennies type=number max="40" placeholder="How many?">
+                    </li>
+                </ol>
+            </fieldset>
+		</div>  
+	</form>
+</body>
+</html>
