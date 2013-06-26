@@ -10,13 +10,26 @@ body {
 	padding: 20px;
 }
 
-form#cash-drawer {
-	background: #9cbc2c;
+form#cash-drawer, form#wallet {
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
 	padding: 20px;
 	width: 400px;
+	float:left;
+	margin-bottom:10pt;
 }
 
+form#cash-drawer {
+	background: #9cbc2c;
+}
+
+form#wallet {
+	background:#C90;
+	margin-left:16px;
+}
+
+table#purchase {
+	clear:both;
+}
 

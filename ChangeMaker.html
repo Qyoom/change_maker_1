@@ -3,6 +3,9 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Change Maker</title>
+    
+    <link rel="stylesheet" type="text/css" href="styles/change.css">
+    
 	<script type="text/javascript" src="scripts/jquery-1.8.2.min.js"></script>
 	<script>
 		$(document).ready(function () {
@@ -14,7 +17,7 @@
 <body>
 	<form id=cash-drawer>
         <h1>Cash Drawer</h1>
-        <fieldset id="bills">
+        <fieldset id="cd-bills">
             <legend>Bills</legend>
             <ol>
                 <li>
@@ -35,7 +38,7 @@
                 </li>
             </ol>
         </fieldset>
-        <fieldset id="coins">
+        <fieldset id="cd-coins">
             <legend>Coins</legend>
             <ol>
                 <li>
@@ -66,9 +69,64 @@
             </ol>
         </fieldset>
 	</form> <!--id="cash-drawer"-->
-    <table>
+    
+    <form id=wallet>
+        <h1>Wallet</h1>
+        <fieldset id="w-bills">
+            <legend>Bills</legend>
+            <ol>
+                <li>
+                    <label for=twenties>Twenties</label>
+                    <input id=twenties name=twenties type=number max="10" placeholder="How many?" autofocus>
+                </li>
+                <li>
+                    <label for=tens>Tens</label>
+                    <input id=tens name=tens type=number max="15" placeholder="How many?">
+                </li>
+                <li>
+                    <label for=fives>Fives</label>
+                    <input id=fives name=fives type=number max="20" placeholder="How many?">
+                </li>
+                <li>
+                    <label for=ones>Ones</label>
+                    <input id=ones name=ones type=number max="30" placeholder="How many?">
+                </li>
+            </ol>
+        </fieldset>
+        <fieldset id="w-coins">
+            <legend>Coins</legend>
+            <ol>
+                <li>
+                    <label for=dollars>Dollars</label>
+                    <input id=dollars name=dollars type=number max="10" placeholder="How many?">
+                </li>
+                <li>
+                    <label for=half-dollars>Half Dollars</label>
+                    <input id=half-dollars name=half-dollars type=number max="10" placeholder="How many?">
+                </li>
+                <li>
+                    <label for=quarters>Quarters</label>
+                    <input id=quarters name=quarters type=number max="20" placeholder="How many?">
+                </li>
+                <li>
+                    <label for=dimes>Dimes</label>
+                    <input id=dimes name=dimes type=number max="40" placeholder="How many?">
+                </li>
+                <li>
+                    <label for=nickels>Nickels</label>
+                    <input id=nickels name=nickels type=number max="40" placeholder="How many?">
+                </li>
+                <li>
+                    <label for=pennies>Pennies</label>
+                    <input id=pennies name=pennies type=number max="40" placeholder="How many?">
+                </li>
+            </ol>
+        </fieldset>
+	</form> <!--id="cash-drawer"-->
+    
+    <table id="purchase">
     	<thead><tr>
-        	<th>Purchase Total</th><th>Payment Rendered</th>
+        	<th>Purchase Total</th><th>Cash Payment Rendered</th><th>Change</th>
         </tr></thead>
     </table>
 </body>
