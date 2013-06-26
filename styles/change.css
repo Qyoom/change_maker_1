@@ -37,25 +37,21 @@ form#cash-drawer legend, form#wallet legend {
 	padding-bottom: 10px;
 }
 
-form#cash-drawer legend {
+form#cash-drawer legend, form#cash-drawer h1 {
 	text-shadow: 0 1px 1px #c0d576;
 }
 
-form#wallet legend {
+form#wallet legend, form#wallet h1 {
 	text-shadow: 0 1px 1px #d6caae;
 }
 
-form#cash-drawer h1 {
+form h1 {
+	font-size:24px;
 	color: #384313;
-	text-shadow: 0 1px 1px #c0d576;
+	margin-bottom:10px;
 }
 
-form#wallet h1 {
-	color: #384313;
-	text-shadow: 0 1px 1px #d6caae;
-}
-
-table#purchase {
+form#cashier {
 	clear:both;
 }
 

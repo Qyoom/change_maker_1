@@ -16,7 +16,7 @@
 
 <body>
 	<form id=cash-drawer>
-        <h1>Cash Drawer</h1>
+        <h1>Store Cash Drawer</h1>
         <fieldset id="cd-bills">
             <legend>Bills</legend>
             <ol>
@@ -71,7 +71,7 @@
 	</form> <!--id="cash-drawer"-->
     
     <form id=wallet>
-        <h1>Wallet</h1>
+        <h1>Customer Wallet</h1>
         <fieldset id="w-bills">
             <legend>Bills</legend>
             <ol>
@@ -124,10 +124,15 @@
         </fieldset>
 	</form> <!--id="cash-drawer"-->
     
-    <table id="purchase">
-    	<thead><tr>
-        	<th>Purchase Total</th><th>Cash Payment Rendered</th><th>Change</th>
-        </tr></thead>
-    </table>
+    <form id="cashier">
+    	<fieldset id="purchase">
+        	<legend>Purchase Transaction</legend>
+            <table id="transaction">
+                <thead><tr>
+                    <th>Purchase Total</th><th>Cash Payment</th><th>Change Returned</th>
+                </tr></thead>
+            </table>
+        </fieldset>
+    </form>
 </body>
 </html>
