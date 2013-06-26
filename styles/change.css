@@ -18,6 +18,7 @@ form#cash-drawer, form#wallet {
 	width: 400px;
 	float:left;
 	margin-bottom:10pt;
+	border:none;
 }
 
 form#cash-drawer {
@@ -27,6 +28,31 @@ form#cash-drawer {
 form#wallet {
 	background:#C90;
 	margin-left:16px;
+}
+
+form#cash-drawer legend, form#wallet legend {
+	color: #384313;
+	font-size: 16px;
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+
+form#cash-drawer legend {
+	text-shadow: 0 1px 1px #c0d576;
+}
+
+form#wallet legend {
+	text-shadow: 0 1px 1px #d6caae;
+}
+
+form#cash-drawer h1 {
+	color: #384313;
+	text-shadow: 0 1px 1px #c0d576;
+}
+
+form#wallet h1 {
+	color: #384313;
+	text-shadow: 0 1px 1px #d6caae;
 }
 
 table#purchase {
