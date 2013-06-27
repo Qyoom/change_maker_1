@@ -1,7 +1,7 @@
 $(document).ready(function () {
 	console.log("The DOM is now loaded.");
 	
-	// View model
+	// View model - Knockout data binding
 	function ChangeMakerViewModel() {
 		var self = this;
 		
