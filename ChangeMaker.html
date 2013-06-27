@@ -15,124 +15,126 @@
 </head>
 
 <body>
-	<form id=cash-drawer>
-        <h1>Store Cash Drawer</h1>
-        <fieldset id="cd-bills">
-            <legend>Bills</legend>
-            <ol>
-                <li>
-                    <label for=twenties>Twenties</label>
-                    <input id=twenties name=twenties type=number min="0" max="10" placeholder="How many?" autofocus>
-                </li>
-                <li>
-                    <label for=tens>Tens</label>
-                    <input id=tens name=tens type=number min="0" max="15" placeholder="How many?">
-                </li>
-                <li>
-                    <label for=fives>Fives</label>
-                    <input id=fives name=fives type=number min="0" max="20" placeholder="How many?">
-                </li>
-                <li>
-                    <label for=ones>Ones</label>
-                    <input id=ones name=ones type=number min="0" max="30" placeholder="How many?">
-                </li>
-            </ol>
-        </fieldset>
-        <fieldset id="cd-coins">
-            <legend>Coins</legend>
-            <ol>
-                <li>
-                    <label for=dollars>Dollars</label>
-                    <input id=dollars name=dollars type=number min="0" max="10" placeholder="How many?">
-                    <div id="subDollars" class="subAmt"></div>
-                </li>
-                <li>
-                    <label for=half-dollars>Half Dollars</label>
-                    <input id=half-dollars name=half-dollars type=number min="0" max="10" placeholder="How many?">
-                </li>
-                <li>
-                    <label for=quarters>Quarters</label>
-                    <input id=quarters name=quarters type=number min="0" max="20" placeholder="How many?">
-                </li>
-                <li>
-                    <label for=dimes>Dimes</label>
-                    <input id=dimes name=dimes type=number min="0" max="40" placeholder="How many?">
-                </li>
-                <li>
-                    <label for=nickels>Nickels</label>
-                    <input id=nickels name=nickels type=number min="0" max="40" placeholder="How many?">
-                </li>
-                <li>
-                    <label for=pennies>Pennies</label>
-                    <input id=pennies name=pennies type=number min="0" max="40" placeholder="How many?">
-                </li>
-            </ol>
-        </fieldset>
-	</form> <!--id="cash-drawer"-->
-    
-    <form id=wallet>
-        <h1>Customer Wallet</h1>
-        <fieldset id="w-bills">
-            <legend>Bills</legend>
-            <ol>
-                <li>
-                    <label for=twenties>Twenties</label>
-                    <input id=twenties name=twenties type=number min="0" max="10" placeholder="How many?">
-                </li>
-                <li>
-                    <label for=tens>Tens</label>
-                    <input id=tens name=tens type=number min="0" max="15" placeholder="How many?">
-                </li>
-                <li>
-                    <label for=fives>Fives</label>
-                    <input id=fives name=fives type=number min="0" max="20" placeholder="How many?">
-                </li>
-                <li>
-                    <label for=ones>Ones</label>
-                    <input id=ones name=ones type=number min="0" max="30" placeholder="How many?">
-                </li>
-            </ol>
-        </fieldset>
-        <fieldset id="w-coins">
-            <legend>Coins</legend>
-            <ol>
-                <li>
-                    <label for=dollars>Dollars</label>
-                    <input id=dollars name=dollars type=number min="0" max="10" placeholder="How many?">
-                </li>
-                <li>
-                    <label for=half-dollars>Half Dollars</label>
-                    <input id=half-dollars name=half-dollars type=number min="0" max="10" placeholder="How many?">
-                </li>
-                <li>
-                    <label for=quarters>Quarters</label>
-                    <input id=quarters name=quarters type=number min="0" max="20" placeholder="How many?">
-                </li>
-                <li>
-                    <label for=dimes>Dimes</label>
-                    <input id=dimes name=dimes type=number min="0" max="40" placeholder="How many?">
-                </li>
-                <li>
-                    <label for=nickels>Nickels</label>
-                    <input id=nickels name=nickels type=number min="0" max="40" placeholder="How many?">
-                </li>
-                <li>
-                    <label for=pennies>Pennies</label>
-                    <input id=pennies name=pennies type=number min="0" max="40" placeholder="How many?">
-                </li>
-            </ol>
-        </fieldset>
-	</form> <!--id="cash-drawer"-->
-    
-    <form id="cashier">
-    	<fieldset id="purchase">
-        	<legend>Purchase Transaction</legend>
-            <table id="transaction">
-                <thead><tr>
-                    <th>Purchase Total</th><th>Cash Payment</th><th>Change Returned</th>
-                </tr></thead>
-            </table>
-        </fieldset>
-    </form>
+	<div id="ui-container">
+        <form id=cash-drawer>
+            <h1>Store Cash Drawer</h1>
+            <fieldset id="cd-bills">
+                <legend>Bills</legend>
+                <ol>
+                    <li>
+                        <label for=twenties>Twenties</label>
+                        <input id=twenties name=twenties type=number min="0" max="10" placeholder="How many?" autofocus>
+                    </li>
+                    <li>
+                        <label for=tens>Tens</label>
+                        <input id=tens name=tens type=number min="0" max="15" placeholder="How many?">
+                    </li>
+                    <li>
+                        <label for=fives>Fives</label>
+                        <input id=fives name=fives type=number min="0" max="20" placeholder="How many?">
+                    </li>
+                    <li>
+                        <label for=ones>Ones</label>
+                        <input id=ones name=ones type=number min="0" max="30" placeholder="How many?">
+                    </li>
+                </ol>
+            </fieldset>
+            <fieldset id="cd-coins">
+                <legend>Coins</legend>
+                <ol>
+                    <li>
+                        <label for=dollars>Dollars</label>
+                        <input id=dollars name=dollars type=number min="0" max="10" placeholder="How many?">
+                        <div id="subDollars" class="subAmt"></div>
+                    </li>
+                    <li>
+                        <label for=half-dollars>Half Dollars</label>
+                        <input id=half-dollars name=half-dollars type=number min="0" max="10" placeholder="How many?">
+                    </li>
+                    <li>
+                        <label for=quarters>Quarters</label>
+                        <input id=quarters name=quarters type=number min="0" max="20" placeholder="How many?">
+                    </li>
+                    <li>
+                        <label for=dimes>Dimes</label>
+                        <input id=dimes name=dimes type=number min="0" max="40" placeholder="How many?">
+                    </li>
+                    <li>
+                        <label for=nickels>Nickels</label>
+                        <input id=nickels name=nickels type=number min="0" max="40" placeholder="How many?">
+                    </li>
+                    <li>
+                        <label for=pennies>Pennies</label>
+                        <input id=pennies name=pennies type=number min="0" max="40" placeholder="How many?">
+                    </li>
+                </ol>
+            </fieldset>
+        </form> <!--id="cash-drawer"-->
+        
+        <form id=wallet>
+            <h1>Customer Wallet</h1>
+            <fieldset id="w-bills">
+                <legend>Bills</legend>
+                <ol>
+                    <li>
+                        <label for=twenties>Twenties</label>
+                        <input id=twenties name=twenties type=number min="0" max="10" placeholder="How many?">
+                    </li>
+                    <li>
+                        <label for=tens>Tens</label>
+                        <input id=tens name=tens type=number min="0" max="15" placeholder="How many?">
+                    </li>
+                    <li>
+                        <label for=fives>Fives</label>
+                        <input id=fives name=fives type=number min="0" max="20" placeholder="How many?">
+                    </li>
+                    <li>
+                        <label for=ones>Ones</label>
+                        <input id=ones name=ones type=number min="0" max="30" placeholder="How many?">
+                    </li>
+                </ol>
+            </fieldset>
+            <fieldset id="w-coins">
+                <legend>Coins</legend>
+                <ol>
+                    <li>
+                        <label for=dollars>Dollars</label>
+                        <input id=dollars name=dollars type=number min="0" max="10" placeholder="How many?">
+                    </li>
+                    <li>
+                        <label for=half-dollars>Half Dollars</label>
+                        <input id=half-dollars name=half-dollars type=number min="0" max="10" placeholder="How many?">
+                    </li>
+                    <li>
+                        <label for=quarters>Quarters</label>
+                        <input id=quarters name=quarters type=number min="0" max="20" placeholder="How many?">
+                    </li>
+                    <li>
+                        <label for=dimes>Dimes</label>
+                        <input id=dimes name=dimes type=number min="0" max="40" placeholder="How many?">
+                    </li>
+                    <li>
+                        <label for=nickels>Nickels</label>
+                        <input id=nickels name=nickels type=number min="0" max="40" placeholder="How many?">
+                    </li>
+                    <li>
+                        <label for=pennies>Pennies</label>
+                        <input id=pennies name=pennies type=number min="0" max="40" placeholder="How many?">
+                    </li>
+                </ol>
+            </fieldset>
+        </form> <!--id="cash-drawer"-->
+        
+        <form id="cashier">
+        	<h1>Purchase Transaction</h1>
+            <fieldset id="purchase">
+                <table id="transaction">
+                    <thead><tr>
+                        <th>Purchase Total</th><th>Cash Payment</th><th>Change Returned</th>
+                    </tr></thead>
+                </table>
+            </fieldset>
+        </form>
+    </div> <!--id="ui_container"-->
 </body>
 </html>

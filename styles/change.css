@@ -15,19 +15,19 @@ form#cash-drawer, form#wallet {
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
 	padding: 20px;
-	width: 400px;
-	float:left;
+	width: 44%;
 	margin-bottom:10pt;
 	border:none;
 }
 
 form#cash-drawer {
 	background: #9cbc2c;
+	float:left;
 }
 
 form#wallet {
 	background:#C90;
-	margin-left:16px;
+	float:right;
 }
 
 form#cash-drawer legend, form#wallet legend {
@@ -53,5 +53,32 @@ form h1 {
 
 form#cashier {
 	clear:both;
+	width:100%;
+}
+
+div#ui-container {
+	width:800px;
+}
+
+form ol li {
+	background: #b9cf6a;
+	background: rgba(255,255,255,.3);
+	border-color: #e3ebc3;
+	border-color: rgba(255,255,255,.6);
+	border-style: solid;
+	border-width: 2px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	line-height: 30px;
+	list-style: none;
+	padding: 5px 10px;
+	margin-bottom: 2px;
+}
+
+form label {
+	float: left;
+	font-size: 13px;
+	width: 110px;
 }
 
