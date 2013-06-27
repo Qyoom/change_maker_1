@@ -1,4 +1,4 @@
-html, body, h1, form, fieldset, legend, ol, li {
+html, body, h1, form, fieldset, ol, li {
 	margin: 0;
 	padding: 0;
 }
@@ -17,7 +17,10 @@ form#cash-drawer, form#wallet {
 	padding: 20px;
 	width: 44%;
 	margin-bottom:10pt;
-	border:none;
+}
+
+fieldset {
+	border:none;	
 }
 
 form#cash-drawer {
@@ -30,11 +33,12 @@ form#wallet {
 	float:right;
 }
 
-form#cash-drawer legend, form#wallet legend {
+form legend {
 	color: #384313;
 	font-size: 16px;
 	font-weight: bold;
-	padding-bottom: 10px;
+	padding:0;
+	padding-bottom:6px
 }
 
 form#cash-drawer legend, form#cash-drawer h1 {
@@ -49,6 +53,7 @@ form h1 {
 	font-size:24px;
 	color: #384313;
 	margin-bottom:10px;
+	margin-top:-6px;
 }
 
 form#cashier {
@@ -70,7 +75,7 @@ form ol li {
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
-	line-height: 30px;
+	line-height: 24px;
 	list-style: none;
 	padding: 5px 10px;
 	margin-bottom: 2px;
@@ -82,3 +87,6 @@ form label {
 	width: 110px;
 }
 
+form fieldset {
+	margin-top:12px;
+}
