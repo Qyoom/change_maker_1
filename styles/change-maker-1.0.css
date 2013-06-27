@@ -1,4 +1,4 @@
-html, body, h1, form, fieldset, ol, li {
+html, body, h1, fieldset, ol, li {
 	margin: 0;
 	padding: 0;
 }
@@ -20,6 +20,34 @@ form#cash-drawer, form#wallet {
 
 form#cash-drawer {
 	width: 300px;
+}
+
+form#transaction {
+	width:auto;
+	float:left;	
+}
+
+form#transaction table {
+	padding-top:80px;
+}
+
+form#transaction table td {
+	width:53px;
+	height:35px;
+	background-repeat:no-repeat;
+	border:none;
+}
+
+form#transaction table td.pay {
+	background-image:url(../images/left_arrow.png);
+	padding-left:5px;
+	padding-bottom:5px;
+}
+
+form#transaction input[type=number] {
+	width:30px;
+	margin-left:11px;
+	margin-bottom:4px;
 }
 
 form#wallet {
@@ -80,7 +108,7 @@ form#cashier {
 }
 
 div#ui-container {
-	width:780px;
+	width:810px;
 }
 
 form ol li {
@@ -119,3 +147,5 @@ form label {
 form fieldset {
 	margin-top:12px;
 }
+
+

@@ -17,7 +17,7 @@ $(document).ready(function () {
 		this.cd_nickels = ko.observable();
 		this.cd_pennies = ko.observable();
 		
-		// Wallet
+		// Fill Wallet
 		this.w_twenties = ko.observable();
 		this.w_tens = ko.observable();
 		this.w_fives = ko.observable();
@@ -28,6 +28,18 @@ $(document).ready(function () {
 		this.w_dimes = ko.observable();
 		this.w_nickels = ko.observable();
 		this.w_pennies = ko.observable();
+		
+		// Pay from Wallet
+		this.pay_twenty = ko.observable();
+		this.pay_ten = ko.observable();
+		this.pay_five = ko.observable();
+		this.pay_one = ko.observable();
+		this.pay_dollar = ko.observable();
+		this.pay_half_dollar = ko.observable();
+		this.pay_quarter = ko.observable();
+		this.pay_dime = ko.observable();
+		this.pay_nickel = ko.observable();
+		this.pay_penny = ko.observable();
 		
 		/***** Denomination amounts - store cash drawer *****/
 		
@@ -149,6 +161,38 @@ $(document).ready(function () {
 			return total;
 		});
 	}
+	
+	/***** Calculate change *****/
+	
+	self.changeInTwenties = ko.computed(function() {
+	});
+	
+	self.changeInTens = ko.computed(function() {
+	});
+	
+	self.changeInFives = ko.computed(function() {
+	});
+	
+	self.changeInOnes = ko.computed(function() {
+	});
+	
+	self.changeInDollars = ko.computed(function() {
+	});
+	
+	self.changeInHalfDollars = ko.computed(function() {
+	});
+	
+	self.changeInQuarters = ko.computed(function() {
+	});
+	
+	self.changeInDimes = ko.computed(function() {
+	});
+	
+	self.changeInNickels = ko.computed(function() {
+	});
+	
+	self.changeInPennies = ko.computed(function() {
+	});
 	
 	// Activate bindings
 	ko.applyBindings(new ChangeMakerViewModel());
