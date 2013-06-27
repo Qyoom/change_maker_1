@@ -68,7 +68,27 @@ $(document).ready(function () {
 		});
 		
 		self.amtCdPennies = ko.computed(function() {
-		   	return self.cd_pennies() === undefined ? 0.0 : parseInt(self.cd_pennies()) * 0.01;
+			var amt = self.cd_pennies() === undefined ? 0.0 : parseInt(self.cd_pennies()) * 0.01;
+			console.log("self.cd_pennies() amt: " + amt);
+			return amt;
+		});
+		
+		// Store cash drawer total
+		self.totalAmtCashDrawer = ko.computed(function() {
+			console.log("totalAmtCashDrawer TOP");
+			var total = 
+				self.amtCdTwenties() +
+				self.amtCdTens() +
+				self.amtCdFives() +
+				self.amtCdOnes() +
+				self.amtCdDollars() +
+				self.amtCdHalfDollars() +
+				self.amtCdQuarters() +
+				self.amtCdDimes() +
+				self.amtCdNickels() +
+				self.amtCdPennies();
+			console.log("totalAmtCashDrawer - total: " + total);
+			return total;
 		});
 	
 		/***** Denomination amounts - wallet *****/

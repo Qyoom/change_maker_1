@@ -99,6 +99,12 @@
                     </li>
                 </ol>
             </fieldset>
+            <fieldset id="cd-total-amt">
+                <legend>Total</legend>
+                <div id="total-amt-cd" class="amount" data-bind="visible: totalAmtCashDrawer() > 0">
+                    $<span data-bind="text: totalAmtCashDrawer().toFixed(2)"></span>
+                </div>
+            </fieldset>
         </form> <!--id="cash-drawer"-->
         
         <form id=wallet>

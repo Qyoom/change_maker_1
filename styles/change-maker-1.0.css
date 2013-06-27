@@ -38,7 +38,18 @@ form legend {
 	font-size: 16px;
 	font-weight: bold;
 	padding:0;
-	padding-bottom:6px
+	padding-bottom:6px;
+}
+
+#cd-total-amt {
+	margin-bottom:-10px;
+	padding-right:12px;
+	font-weight:600;
+}
+
+#cd-total-amt legend {
+	display:inline-block;
+	float:left;
 }
 
 form#cash-drawer legend, form#cash-drawer h1 {
@@ -85,7 +96,7 @@ form ol li input[type=number]{
 	width:80px;
 }
 
-form ol li div.amount {
+form div.amount {
 	display:inline-block;
 	color: #384313;
 	font-size:13px;
