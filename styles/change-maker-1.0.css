@@ -41,13 +41,13 @@ form legend {
 	padding-bottom:6px;
 }
 
-#cd-total-amt {
+#cd-total-amt, #w-total-amt {
 	margin-bottom:-10px;
 	padding-right:12px;
 	font-weight:600;
 }
 
-#cd-total-amt legend {
+#cd-total-amt legend, #w-total-amt legend {
 	display:inline-block;
 	float:left;
 }
@@ -100,7 +100,6 @@ form div.amount {
 	display:inline-block;
 	color: #384313;
 	font-size:13px;
-	/*margin-left:2em;*/
 	float:right;
 }
 

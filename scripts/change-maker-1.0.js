@@ -68,9 +68,7 @@ $(document).ready(function () {
 		});
 		
 		self.amtCdPennies = ko.computed(function() {
-			var amt = self.cd_pennies() === undefined ? 0.0 : parseInt(self.cd_pennies()) * 0.01;
-			console.log("self.cd_pennies() amt: " + amt);
-			return amt;
+			return self.cd_pennies() === undefined ? 0.0 : parseInt(self.cd_pennies()) * 0.01;
 		});
 		
 		// Store cash drawer total
@@ -131,6 +129,24 @@ $(document).ready(function () {
 		
 		self.amtWPennies = ko.computed(function() {
 		   	return self.w_pennies() === undefined ? 0.0 : parseInt(self.w_pennies()) * 0.01;
+		});
+		
+		// Wallet total
+		self.totalAmtWallet = ko.computed(function() {
+			console.log("totalAmtWallet TOP");
+			var total = 
+				self.amtWTwenties() +
+				self.amtWTens() +
+				self.amtWFives() +
+				self.amtWOnes() +
+				self.amtWDollars() +
+				self.amtWHalfDollars() +
+				self.amtWQuarters() +
+				self.amtWDimes() +
+				self.amtWNickels() +
+				self.amtWPennies();
+			console.log("totalAmtWallet - total: " + total);
+			return total;
 		});
 	}
 	

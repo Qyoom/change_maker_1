@@ -189,7 +189,13 @@
                     </li>
                 </ol>
             </fieldset>
-        </form> <!--id="cash-drawer"-->
+            <fieldset id="w-total-amt">
+                <legend>Total</legend>
+                <div id="total-amt-w" class="amount" data-bind="visible: totalAmtWallet() > 0">
+                    $<span data-bind="text: totalAmtWallet().toFixed(2)"></span>
+                </div>
+            </fieldset>
+        </form> <!--id="wallet"-->
         
         <form id="cashier">
         	<h1>Purchase Transaction</h1>
