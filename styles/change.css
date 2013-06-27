@@ -82,7 +82,15 @@ form ol li {
 }
 
 form ol li input[type=number]{
-	width:80px;	
+	width:80px;
+}
+
+form ol li div.amount {
+	display:inline-block;
+	color: #384313;
+	font-size:13px;
+	/*margin-left:2em;*/
+	float:right;
 }
 
 form label {
