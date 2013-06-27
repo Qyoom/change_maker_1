@@ -45,9 +45,12 @@ form#transaction table td.pay {
 }
 
 form#transaction input[type=number] {
-	width:30px;
+	width:32px;
 	margin-left:11px;
 	margin-bottom:4px;
+	border-style:solid;
+	border-width:medium;
+	border-color:#cc9900;
 }
 
 form#wallet {
