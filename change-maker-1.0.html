@@ -108,25 +108,30 @@
                 <ol>
                     <li>
                         <label for=w-twenties>Twenties</label>
-                        <input id=w-twenties name=w-twenties type=number min="0" max="10" placeholder="How many?" />
-                        <div id="amt-w-twenties" class="amount"></div>
+                        <input id=w-twenties data-bind="value: w_twenties" type=number min="0" max="10" placeholder="How many?" />
+                        <div id="amt-w-twenties" class="amount" data-bind="visible: amtWTwenties() > 0">
+                        	$<span data-bind="text: amtWTwenties().toFixed(2)"></span>
+                        </div>
                     </li>
                     <li>
                         <label for=w-tens>Tens</label>
-                        <input id=w-tens name=w-tens type=number min="0" max="15" placeholder="How many?" />
-                        <div id="amt-w-tens" class="amount">
+                        <input id=w-tens data-bind="value: w_tens" type=number min="0" max="15" placeholder="How many?" />
+                        <div id="amt-w-tens" class="amount" data-bind="visible: amtWTens() > 0">
+                        	$<span data-bind="text: amtWTens().toFixed(2)"></span>
                         </div>
                     </li>
                     <li>
                         <label for=w-fives>Fives</label>
-                        <input id=w-fives name=w-fives type=number min="0" max="20" placeholder="How many?" />
-                        <div id="amt-w-fives" class="amount">
+                        <input id=w-fives data-bind="value: w_fives" type=number min="0" max="20" placeholder="How many?" />
+                        <div id="amt-w-fives" class="amount" data-bind="visible: amtWFives() > 0">
+                        	$<span data-bind="text: amtWFives().toFixed(2)"></span>
                         </div>
                     </li>
                     <li>
                         <label for=w-ones>Ones</label>
-                        <input id=w-ones name=w-ones type=number min="0" max="30" placeholder="How many?" />
-                        <div id="amt-w-ones" class="amount">
+                        <input id=w-ones data-bind="value: w_ones" type=number min="0" max="30" placeholder="How many?" />
+                        <div id="amt-w-ones" class="amount" data-bind="visible: amtWOnes() > 0">
+                        	$<span data-bind="text: amtWOnes().toFixed(2)"></span>
                         </div>
                     </li>
                 </ol>
@@ -136,38 +141,44 @@
                 <ol>
                     <li>
                         <label for=w-dollars>Dollars</label>
-                        <input id=w-dollars name=w-dollars type=number min="0" max="10" placeholder="How many?" />
-                        <div id="amt-w-dollars" class="amount">
+                        <input id=w-dollars data-bind="value: w_dollars" type=number min="0" max="10" placeholder="How many?" />
+                        <div id="amt-w-dollars" class="amount" data-bind="visible: amtWDollars() > 0">
+                        	$<span data-bind="text: amtWDollars().toFixed(2)"></span>
                         </div>
                     </li>
                     <li>
                         <label for=w-half-dollars>Half Dollars</label>
-                        <input id=w-half-dollars name=w-half-dollars type=number min="0" max="10" placeholder="How many?" />
-                        <div id="amt-w-half-dollars" class="amount">
+                        <input id=w-half-dollars data-bind="value: w_half_dollars" type=number min="0" max="10" placeholder="How many?" />
+                        <div id="amt-w-half-dollars" class="amount" data-bind="visible: amtWHalfDollars() > 0">
+                        	$<span data-bind="text: amtWHalfDollars().toFixed(2)"></span>
                         </div>
                     </li>
                     <li>
                         <label for=w-quarters>Quarters</label>
-                        <input id=w-quarters name=w-quarters type=number min="0" max="20" placeholder="How many?" />
-                        <div id="amt-w-quarters" class="amount">
+                        <input id=w-quarters data-bind="value: w_quarters" type=number min="0" max="20" placeholder="How many?" />
+                        <div id="amt-w-quarters" class="amount" data-bind="visible: amtWQuarters() > 0">
+                        	$<span data-bind="text: amtWQuarters().toFixed(2)"></span>
                         </div>
                     </li>
                     <li>
                         <label for=w-dimes>Dimes</label>
-                        <input id=w-dimes name=w-dimes type=number min="0" max="40" placeholder="How many?" />
-                        <div id="amt-w-dimes" class="amount">
+                        <input id=w-dimes data-bind="value: w_dimes" type=number min="0" max="40" placeholder="How many?" />
+                        <div id="amt-w-dimes" class="amount" data-bind="visible: amtWDimes() > 0">
+                        	$<span data-bind="text: amtWDimes().toFixed(2)"></span>
                         </div>
                     </li>
                     <li>
                         <label for=w-nickels>Nickels</label>
-                        <input id=w-nickels name=w-nickels type=number min="0" max="40" placeholder="How many?" />
-                        <div id="amt-w-nickels" class="amount">
+                        <input id=w-nickels data-bind="value: w_nickels" type=number min="0" max="40" placeholder="How many?" />
+                        <div id="amt-w-nickels" class="amount" data-bind="visible: amtWNickels() > 0">
+                        	$<span data-bind="text: amtWNickels().toFixed(2)"></span>
                         </div>
                     </li>
                     <li>
                         <label for=w-pennies>Pennies</label>
-                        <input id=w-pennies name=w-pennies type=number min="0" max="40" placeholder="How many?" />
-                        <div id="amt-w-pennies" class="amount">
+                        <input id=w-pennies data-bind="value: w_pennies" type=number min="0" max="40" placeholder="How many?" />
+                        <div id="amt-w-pennies" class="amount" data-bind="visible: amtWPennies() > 0">
+                        	$<span data-bind="text: amtWPennies().toFixed(2)"></span>
                         </div>
                     </li>
                 </ol>
