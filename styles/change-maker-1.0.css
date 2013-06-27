@@ -15,8 +15,15 @@ form#cash-drawer, form#wallet {
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
 	padding: 20px;
-	width: 44%;
 	margin-bottom:10pt;
+}
+
+form#cash-drawer {
+	width: 300px;
+}
+
+form#wallet {
+	width: 300px;
 }
 
 fieldset {
@@ -73,7 +80,7 @@ form#cashier {
 }
 
 div#ui-container {
-	width:800px;
+	width:780px;
 }
 
 form ol li {
