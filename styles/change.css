@@ -81,10 +81,14 @@ form ol li {
 	margin-bottom: 2px;
 }
 
+form ol li input[type=number]{
+	width:80px;	
+}
+
 form label {
 	float: left;
 	font-size: 13px;
-	width: 110px;
+	width: 90px;
 }
 
 form fieldset {
