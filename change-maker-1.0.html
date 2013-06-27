@@ -31,18 +31,24 @@
                     </li>
                     <li>
                         <label for=cd-tens>Tens</label>
-                        <input id=cd-tens name=cd-tens type=number min="0" max="15" placeholder="How many?">
-                        <div id="amt-cd-tens" class="amount">$50.00</div>
+                        <input id=cd-tens data-bind="value: cd_tens" type=number min="0" max="15" placeholder="How many?" />
+                        <div id="amt-cd-tens" class="amount"data-bind="visible: amtCdTens() > 0">
+                        	$<span data-bind="text: amtCdTens().toFixed(2)"></span>
+                        </div>
                     </li>
                     <li>
                         <label for=cd-fives>Fives</label>
-                        <input id=cd-fives name=cd-fives type=number min="0" max="20" placeholder="How many?">
-                        <div id="amt-cd-fives" class="amount">$50.00</div>
+                        <input id=cd-fives data-bind="value: cd_fives" type=number min="0" max="20" placeholder="How many?" />
+                        <div id="amt-cd-fives" class="amount" data-bind="visible: amtCdFives() > 0">
+                        	$<span data-bind="text: amtCdFives().toFixed(2)"></span>
+                        </div>
                     </li>
                     <li>
                         <label for=cd-ones>Ones</label>
-                        <input id=cd-ones name=cd-ones type=number min="0" max="30" placeholder="How many?">
-                        <div id="amt-cd-ones" class="amount">$50.00</div>
+                        <input id=cd-ones data-bind="value: cd_ones" type=number min="0" max="30" placeholder="How many?" />
+                        <div id="amt-cd-ones" class="amount" data-bind="visible: amtCdOnes() > 0">
+                        	$<span data-bind="text: amtCdOnes().toFixed(2)"></span>
+                        </div>
                     </li>
                 </ol>
             </fieldset>
@@ -51,33 +57,45 @@
                 <ol>
                     <li>
                         <label for=cd-dollars>Dollars</label>
-                        <input id=cd-dollars name=cd-dollars type=number min="0" max="10" placeholder="How many?">
-                        <div id="amt-cd-dollars" class="amount">$50.00</div>
+                        <input id=cd-dollars data-bind="value: cd_dollars" type=number min="0" max="10" placeholder="How many?" />
+                        <div id="amt-cd-dollars" class="amount" data-bind="visible: amtCdDollars() > 0">
+                        	$<span data-bind="text: amtCdDollars().toFixed(2)"></span>
+                        </div>
                     </li>
                     <li>
                         <label for=cd-half-dollars>Half Dollars</label>
-                        <input id=cd-half-dollars name=cd-half-dollars type=number min="0" max="10" placeholder="How many?">
-                        <div id="amt-cd-half-dollars" class="amount">$50.00</div>
+                        <input id=cd-half-dollars data-bind="value: cd_half_dollars" type=number min="0" max="10" placeholder="How many?" />
+                        <div id="amt-cd-half-dollars" class="amount" data-bind="visible: amtCdHalfDollars() > 0">
+                        	$<span data-bind="text: amtCdHalfDollars().toFixed(2)"></span>
+                        </div>
                     </li>
                     <li>
                         <label for=cd-quarters>Quarters</label>
-                        <input id=cd-quarters name=cd-quarters type=number min="0" max="20" placeholder="How many?">
-                        <div id="amt-cd-quarters" class="amount">$50.00</div>
+                        <input id=cd-quarters data-bind="value: cd_quarters" type=number min="0" max="20" placeholder="How many?" />
+                        <div id="amt-cd-quarters" class="amount" data-bind="visible: amtCdQuarters() > 0">
+                        	$<span data-bind="text: amtCdQuarters().toFixed(2)"></span>
+                        </div>
                     </li>
                     <li>
                         <label for=cd-dimes>Dimes</label>
-                        <input id=cd-dimes name=cd-dimes type=number min="0" max="40" placeholder="How many?">
-                        <div id="amt-cd-dimes" class="amount">$50.00</div>
+                        <input id=cd-dimes data-bind="value: cd_dimes" type=number min="0" max="40" placeholder="How many?" />
+                        <div id="amt-cd-dimes" class="amount" data-bind="visible: amtCdDimes() > 0">
+                        	$<span data-bind="text: amtCdDimes().toFixed(2)"></span>
+                        </div>
                     </li>
                     <li>
                         <label for=cd-nickels>Nickels</label>
-                        <input id=cd-nickels name=cd-nickels type=number min="0" max="40" placeholder="How many?">
-                        <div id="amt-cd-nickels" class="amount">$50.00</div>
+                        <input id=cd-nickels data-bind="value: cd_nickels" type=number min="0" max="40" placeholder="How many?" />
+                        <div id="amt-cd-nickels" class="amount" data-bind="visible: amtCdNickels() > 0">
+                        	$<span data-bind="text: amtCdNickels().toFixed(2)"></span>
+                        </div>
                     </li>
                     <li>
                         <label for=cd-pennies>Pennies</label>
-                        <input id=cd-pennies name=cd-pennies type=number min="0" max="40" placeholder="How many?">
-                        <div id="amt-cd-pennies" class="amount">$50.00</div>
+                        <input id=cd-pennies data-bind="value: cd_pennies" type=number min="0" max="40" placeholder="How many?" />
+                        <div id="amt-cd-pennies" class="amount" data-bind="visible: amtCdPennies() > 0">
+                        	$<span data-bind="text: amtCdPennies().toFixed(2)"></span>
+                        </div>
                     </li>
                 </ol>
             </fieldset>
@@ -90,23 +108,26 @@
                 <ol>
                     <li>
                         <label for=w-twenties>Twenties</label>
-                        <input id=w-twenties name=w-twenties type=number min="0" max="10" placeholder="How many?">
-                        <div id="amt-w-twenties" class="amount">$50.00</div>
+                        <input id=w-twenties name=w-twenties type=number min="0" max="10" placeholder="How many?" />
+                        <div id="amt-w-twenties" class="amount"></div>
                     </li>
                     <li>
                         <label for=w-tens>Tens</label>
-                        <input id=w-tens name=w-tens type=number min="0" max="15" placeholder="How many?">
-                        <div id="amt-w-tens" class="amount">$50.00</div>
+                        <input id=w-tens name=w-tens type=number min="0" max="15" placeholder="How many?" />
+                        <div id="amt-w-tens" class="amount">
+                        </div>
                     </li>
                     <li>
                         <label for=w-fives>Fives</label>
-                        <input id=w-fives name=w-fives type=number min="0" max="20" placeholder="How many?">
-                        <div id="amt-w-fives" class="amount">$50.00</div>
+                        <input id=w-fives name=w-fives type=number min="0" max="20" placeholder="How many?" />
+                        <div id="amt-w-fives" class="amount">
+                        </div>
                     </li>
                     <li>
                         <label for=w-ones>Ones</label>
-                        <input id=w-ones name=w-ones type=number min="0" max="30" placeholder="How many?">
-                        <div id="amt-w-ones" class="amount">$50.00</div>
+                        <input id=w-ones name=w-ones type=number min="0" max="30" placeholder="How many?" />
+                        <div id="amt-w-ones" class="amount">
+                        </div>
                     </li>
                 </ol>
             </fieldset>
@@ -115,33 +136,39 @@
                 <ol>
                     <li>
                         <label for=w-dollars>Dollars</label>
-                        <input id=w-dollars name=w-dollars type=number min="0" max="10" placeholder="How many?">
-                        <div id="amt-w-dollars" class="amount">$50.00</div>
+                        <input id=w-dollars name=w-dollars type=number min="0" max="10" placeholder="How many?" />
+                        <div id="amt-w-dollars" class="amount">
+                        </div>
                     </li>
                     <li>
                         <label for=w-half-dollars>Half Dollars</label>
-                        <input id=w-half-dollars name=w-half-dollars type=number min="0" max="10" placeholder="How many?">
-                        <div id="amt-w-half-dollars" class="amount">$50.00</div>
+                        <input id=w-half-dollars name=w-half-dollars type=number min="0" max="10" placeholder="How many?" />
+                        <div id="amt-w-half-dollars" class="amount">
+                        </div>
                     </li>
                     <li>
                         <label for=w-quarters>Quarters</label>
-                        <input id=w-quarters name=w-quarters type=number min="0" max="20" placeholder="How many?">
-                        <div id="amt-w-quarters" class="amount">$50.00</div>
+                        <input id=w-quarters name=w-quarters type=number min="0" max="20" placeholder="How many?" />
+                        <div id="amt-w-quarters" class="amount">
+                        </div>
                     </li>
                     <li>
                         <label for=w-dimes>Dimes</label>
-                        <input id=w-dimes name=w-dimes type=number min="0" max="40" placeholder="How many?">
-                        <div id="amt-w-dimes" class="amount">$50.00</div>
+                        <input id=w-dimes name=w-dimes type=number min="0" max="40" placeholder="How many?" />
+                        <div id="amt-w-dimes" class="amount">
+                        </div>
                     </li>
                     <li>
                         <label for=w-nickels>Nickels</label>
-                        <input id=w-nickels name=w-nickels type=number min="0" max="40" placeholder="How many?">
-                        <div id="amt-w-nickels" class="amount">$50.00</div>
+                        <input id=w-nickels name=w-nickels type=number min="0" max="40" placeholder="How many?" />
+                        <div id="amt-w-nickels" class="amount">
+                        </div>
                     </li>
                     <li>
                         <label for=w-pennies>Pennies</label>
-                        <input id=w-pennies name=w-pennies type=number min="0" max="40" placeholder="How many?">
-                        <div id="amt-w-pennies" class="amount">$50.00</div>
+                        <input id=w-pennies name=w-pennies type=number min="0" max="40" placeholder="How many?" />
+                        <div id="amt-w-pennies" class="amount">
+                        </div>
                     </li>
                 </ol>
             </fieldset>
