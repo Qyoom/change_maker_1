@@ -24,8 +24,10 @@
                 <ol>
                     <li>
                         <label for=cd-twenties>Twenties</label>
-                        <input id=cd-twenties name=cd-twenties type=number min="0" max="10" placeholder="How many?" autofocus>
-                        <div id="amt-cd-twenties" class="amount">$50.00</div>
+                        <input id=cd-twenties data-bind="value: cd_twenties" type=number min="0" max="10" placeholder="How many?" autofocus />
+                        <div id="amt-cd-twenties" class="amount" data-bind="visible: amtCdTwenties() > 0">
+                        	$<span data-bind="text: amtCdTwenties().toFixed(2)"></span>
+                        </div>
                     </li>
                     <li>
                         <label for=cd-tens>Tens</label>
