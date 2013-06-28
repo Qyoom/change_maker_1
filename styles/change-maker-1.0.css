@@ -36,6 +36,10 @@ form#transaction table tr {
 	height:38px;
 }
 
+form#transaction table tr#ones { /* special case - extra spacing*/
+	height:71px;
+}
+
 form#transaction table td {
 	width:53px;
 	/*height:35px;*/
