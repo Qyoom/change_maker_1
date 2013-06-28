@@ -113,7 +113,7 @@
                     <td class="change" data-bind="visible: changeInTwenties() > 0">
                         <span data-bind="text: changeInTwenties()"></span>
                     </td>
-                    <td class="pay">
+                    <td class="pay" data-bind="visible: amtWTwenties() > 0">
                         <input id="pay-twenty" data-bind="value: pay_twenty" type=number min="0" placeholder="pay" />
                     </td>
                 </tr>
