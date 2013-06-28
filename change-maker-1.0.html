@@ -121,7 +121,7 @@
                     <td class="change" data-bind="visible: changeInTens() > 0">
                         <span data-bind="text: changeInTens()"></span>
                     </td>
-                    <td class="pay">
+                    <td class="pay" data-bind="visible: amtWTens() > 0">
                         <input id="pay-ten" data-bind="value: pay_ten" type=number min="0" placeholder="pay" />
                     </td>
                 </tr>
@@ -129,7 +129,7 @@
                     <td class="change" data-bind="visible: changeInFives() > 0">
                         <span data-bind="text: changeInFives()"></span>
                     </td>
-                    <td class="pay">
+                    <td class="pay" data-bind="visible: amtWFives() > 0">
                         <input id="pay-five" data-bind="value: pay_five" type=number min="0" placeholder="pay" />
                     </td>
                 </tr>
@@ -137,7 +137,7 @@
                     <td class="change" data-bind="visible: changeInOnes() > 0">
                         <span data-bind="text: changeInOnes()"></span>
                     </td>
-                    <td class="pay">
+                    <td class="pay" data-bind="visible: amtWOnes() > 0">
                         <input id="pay-one" data-bind="value: pay_one" type=number min="0" placeholder="pay" />
                     </td>
                 </tr>
@@ -145,7 +145,7 @@
                     <td class="change" data-bind="visible: changeInDollars() > 0">
                         <span data-bind="text: changeInDollars()"></span>
                     </td>
-                    <td class="pay">
+                    <td class="pay" data-bind="visible: amtWDollars() > 0">
                         <input id="pay-dollar" data-bind="value: pay_dollar" type=number min="0" placeholder="pay" />
                     </td>
                 </tr>
@@ -153,7 +153,7 @@
                     <td class="change" data-bind="visible: changeInHalfDollars() > 0">
                         <span data-bind="text: changeInHalfDollars()"></span>
                     </td>
-                    <td class="pay">
+                    <td class="pay" data-bind="visible: amtWHalfDollars() > 0">
                         <input id="pay-half-dollar" data-bind="value: pay_half_dollar" type=number min="0" placeholder="pay" />
                     </td>
                 </tr>
@@ -161,7 +161,7 @@
                     <td class="change" data-bind="visible: changeInQuarters() > 0">
                         <span data-bind="text: changeInQuarters()"></span>
                     </td>
-                    <td class="pay">
+                    <td class="pay" data-bind="visible: amtWQuarters() > 0">
                         <input id="pay-quarter" data-bind="value: pay_quarter" type=number min="0" placeholder="pay" />
                     </td>
                 </tr>
@@ -169,7 +169,7 @@
                     <td class="change" data-bind="visible: changeInDimes() > 0">
                         <span data-bind="text: changeInDimes()"></span>
                     </td>
-                    <td class="pay">
+                    <td class="pay" data-bind="visible: amtWDimes() > 0">
                         <input id="pay-dime" data-bind="value: pay_dime" type=number min="0" placeholder="pay" />
                     </td>
                 </tr>
@@ -177,7 +177,7 @@
                     <td class="change" data-bind="visible: changeInNickels() > 0">
                         <span data-bind="text: changeInNickels()"></span>
                     </td>
-                    <td class="pay">
+                    <td class="pay" data-bind="visible: amtWNickels() > 0">
                         <input id="pay-nickel" data-bind="value: pay_nickel" type=number min="0" placeholder="pay" />
                     </td>
                 </tr>
@@ -185,7 +185,7 @@
                     <td class="change" data-bind="visible: changeInPennies() > 0">
                         <span data-bind="text: changeInPennies()"></span>
                     </td>
-                    <td class="pay">
+                    <td class="pay" data-bind="visible: amtWPennies() > 0">
                         <input id="pay-penny" data-bind="value: pay_penny" type=number min="0" placeholder="pay" />
                     </td>
                 </tr>
