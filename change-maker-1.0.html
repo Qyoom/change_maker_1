@@ -114,7 +114,7 @@
                         <span data-bind="text: changeInTwenties()"></span>
                     </td>
                     <td class="pay" data-bind="visible: amtWTwenties() > 0">
-                        <input id="pay-twenty" data-bind="value: pay_twenty" type=number min="0" placeholder="pay" />
+                        <input id="pay-twenty" data-bind="value: pay_twenty, attr: { 'max': w_twenties }" type=number min="0" placeholder="pay" />
                     </td>
                 </tr>
                 <tr id="tens">
