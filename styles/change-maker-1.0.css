@@ -80,8 +80,9 @@ form#wallet {
 }
 
 form#transaction {
-	background:#A77778;
+	background:#AF9E9A;
 	float:left;
+	margin-left:1em;
 }
 
 form legend {
@@ -109,6 +110,10 @@ form#cash-drawer legend, form#cash-drawer h1 {
 
 form#wallet legend, form#wallet h1 {
 	text-shadow: 0 1px 1px #d6caae;
+}
+
+form#transaction legend {
+	text-shadow: 0 1px 1px #CBBEBE;
 }
 
 form h1 {
