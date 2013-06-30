@@ -19,7 +19,7 @@ form#cash-drawer, form#wallet, form#transaction {
 }
 
 form#cash-drawer {
-	width: 300px;
+	width: 260px;
 }
 
 form#exchange {
@@ -76,13 +76,18 @@ form#cash-drawer {
 form#wallet {
 	background:#C90;
 	float:left;
-	width: 300px;
+	width: 260px;
 }
 
 form#transaction {
 	background:#AF9E9A;
 	float:left;
 	margin-left:1em;
+	width:320px;
+}
+
+form#transaction ol li input {
+	width:50px;	
 }
 
 form legend {
@@ -116,6 +121,10 @@ form#transaction legend {
 	text-shadow: 0 1px 1px #CBBEBE;
 }
 
+form#transaction fieldset {
+	margin-top:0;	
+}
+
 form h1 {
 	font-size:24px;
 	color: #384313;
@@ -144,7 +153,7 @@ form ol li {
 }
 
 form ol li input[type=number]{
-	width:80px;
+	width:50px;
 }
 
 form div.amount {
