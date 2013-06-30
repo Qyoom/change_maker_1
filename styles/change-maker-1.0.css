@@ -22,39 +22,39 @@ form#cash-drawer {
 	width: 300px;
 }
 
-form#transaction {
+form#exchange {
 	width:128px;
 	float:left;	
 }
 
-form#transaction table {
+form#exchange table {
 	padding-top:80px;
 	width:100%;
 }
 
-form#transaction table tr {
+form#exchange table tr {
 	height:38px;
 }
 
-form#transaction table tr#ones { /* special case - extra spacing*/
+form#exchange table tr#ones { /* special case - extra spacing*/
 	height:71px;
 }
 
-form#transaction table td {
+form#exchange table td {
 	width:53px;
 	/*height:35px;*/
 	background-repeat:no-repeat;
 	border:none;
 }
 
-form#transaction table td.pay {
+form#exchange table td.pay {
 	background-image:url(../images/left_arrow_lite.png);
 	padding-left:5px;
 	padding-bottom:5px;
 	float:right;
 }
 
-form#transaction input[type=number] {
+form#exchange input[type=number] {
 	width:36px;
 	margin-left:9px;
 	margin-top:6px;
@@ -75,8 +75,12 @@ form#cash-drawer {
 
 form#wallet {
 	background:#C90;
-	float:right;
+	float:left;
 	width: 300px;
+}
+
+form#transaction {
+	
 }
 
 form legend {
@@ -119,7 +123,7 @@ form#cashier {
 }
 
 div#ui-container {
-	width:810px;
+	/*width:810px;*/
 }
 
 form ol li {

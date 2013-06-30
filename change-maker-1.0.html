@@ -107,7 +107,7 @@
             </fieldset>
         </form> <!--id="cash-drawer"-->
         
-        <form id=transaction>
+        <form id=exchange>
             <table>
                 <tr id="twenties">
                     <td class="change" data-bind="visible: changeInTwenties() > 0">
@@ -281,6 +281,31 @@
                 </div>
             </fieldset>
         </form> <!--id="wallet"-->
+        
+        <form id=transaction>
+        	<fieldset>
+    			<legend>Cash Purchase Transaction</legend>
+                <ol>
+                    <li>
+                        <label for="cost"><span>Cost</span></label>
+                        <input id="cost" type="text" placeholder="$0.00" />
+                    </li>
+                    <li>
+                        <label for="payment"><span>Payment</span></label>
+                        <input id="payment" type="text" placeholder="$0.00"/>
+                    </li>
+                    <li id="buttons">
+                        <button onclick="processPayment(event)">Submit</button>
+                        <button onclick="clearFields(event)">Clear</button>
+                    </li>
+                    <li>
+                        <p><span id="chgDue"></span></p>
+                        <p id="changeInDenom"></p>
+                        <p id="error"></p>
+                    </li>
+                </ol>
+			</fieldset>            
+    	</form>
         
     </div> <!--id="ui_container"-->
 </body>
