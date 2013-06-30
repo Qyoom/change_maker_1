@@ -19,7 +19,7 @@ form#cash-drawer, form#wallet, form#transaction {
 }
 
 form#cash-drawer {
-	width: 260px;
+	width: 245px;
 }
 
 form#exchange {
@@ -76,7 +76,7 @@ form#cash-drawer {
 form#wallet {
 	background:#C90;
 	float:left;
-	width: 260px;
+	width: 245px;
 }
 
 form#transaction {
@@ -166,7 +166,7 @@ form div.amount {
 form label {
 	float: left;
 	font-size: 13px;
-	width: 90px;
+	width: 85px;
 }
 
 form fieldset {
