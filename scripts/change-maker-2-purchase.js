@@ -23,17 +23,21 @@ function processPayment(e) {
 	
 	// Iterate over denominations in change drawer. This code is decoupled from references to specific denominations.
 	$('#cash-drawer li').each(function(index) {
-		var name = $(this > 'label').val(); // name <- denomination name
-		var denomQty = parseInt($(this > 'input').val());
-		var denomVal = formatCurrencyCalc($(this > 'input').attr("data-denom"));
+		// "this" is the object of the current iteration
+		var name = $(this).children("label:first").text(); // name <- denomination name
+		console.log("name: " + name);
+		var denomQty = parseInt($(this).children("input:first").val());
+		var denomVal = formatCurrencyCalc($(this).children("input:first").attr("data-denom"));
+		// Determine how many times this denomination can fit into the remaining balance
 		var denomFactor = (Math.floor(changeBalRemain / denomVal));
 		
 		// Factor and accumulate quantities and amounts - basic idea: denomination factor * denomination value
 		if(denomFactor > 0 && denomQty > 0) {
+			// Determine how many of this denomination are available
 			denomFactor = (denomFactor <= denomQty) ? denomFactor : denomQty;
 			changeBalRemain = changeBalRemain - (denomVal * denomFactor);
 			// store results for this denomination
-			changeInDenoms.push([id, denomFactor]);
+			changeInDenoms.push([name, denomFactor]);
 			changeAccume = changeAccume + (denomFactor * denomVal);
 		}
 	});
@@ -44,7 +48,7 @@ function processPayment(e) {
 	$('#changeInDenoms').text(stringifyChange(changeInDenoms));
 	$('#chgDue').text("Change due: " + formatCurrencyPrint(changeDue));
 	if(changeBalRemain >= 0.01) {
-		$('#error').text("Unable to process transaction--Not enough change!");
+		$('#error').text("Unable to process transaction‒Not enough change!");
 	}
 	else {
 		$('#error').text('');	
