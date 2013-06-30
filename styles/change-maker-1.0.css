@@ -10,7 +10,7 @@ body {
 	padding: 20px;
 }
 
-form#cash-drawer, form#wallet {
+form#cash-drawer, form#wallet, form#transaction {
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
@@ -80,7 +80,8 @@ form#wallet {
 }
 
 form#transaction {
-	
+	background:#A77778;
+	float:left;
 }
 
 form legend {
@@ -115,11 +116,6 @@ form h1 {
 	color: #384313;
 	margin-bottom:10px;
 	margin-top:-6px;
-}
-
-form#cashier {
-	clear:both;
-	width:100%;
 }
 
 div#ui-container {
