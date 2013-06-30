@@ -13,7 +13,7 @@
     
     <!-- This application's custom JS -->
     <script type="text/javascript" src="scripts/change-maker-1.0.js"></script>
-    <script type="text/javascript" src="scripts/change-maker-2-purchase"></script>
+    <script type="text/javascript" src="scripts/change-maker-2-purchase.js"></script>
 </head>
 
 <body>
@@ -25,28 +25,28 @@
                 <ol>
                     <li>
                         <label for=cd-twenties>Twenties</label>
-                        <input id=cd-twenties data-bind="value: cd_twenties" type=number min="0" max="10" placeholder="quantity?" autofocus />
+                        <input id=cd-twenties data-denom="20.00" data-bind="value: cd_twenties" type=number min="0" max="10" placeholder="quantity?" autofocus />
                         <div id="amt-cd-twenties" class="amount" data-bind="visible: amtCdTwenties() > 0">
                         	$<span data-bind="text: amtCdTwenties().toFixed(2)"></span>
                         </div>
                     </li>
                     <li>
                         <label for=cd-tens>Tens</label>
-                        <input id=cd-tens data-bind="value: cd_tens" type=number min="0" max="15" placeholder="quantity?" />
+                        <input id=cd-tens data-denom="10.00" data-bind="value: cd_tens" type=number min="0" max="15" placeholder="quantity?" />
                         <div id="amt-cd-tens" class="amount"data-bind="visible: amtCdTens() > 0">
                         	$<span data-bind="text: amtCdTens().toFixed(2)"></span>
                         </div>
                     </li>
                     <li>
                         <label for=cd-fives>Fives</label>
-                        <input id=cd-fives data-bind="value: cd_fives" type=number min="0" max="20" placeholder="quantity?" />
+                        <input id=cd-fives data-denom="5.00" data-bind="value: cd_fives" type=number min="0" max="20" placeholder="quantity?" />
                         <div id="amt-cd-fives" class="amount" data-bind="visible: amtCdFives() > 0">
                         	$<span data-bind="text: amtCdFives().toFixed(2)"></span>
                         </div>
                     </li>
                     <li>
                         <label for=cd-ones>Ones</label>
-                        <input id=cd-ones data-bind="value: cd_ones" type=number min="0" max="30" placeholder="quantity?" />
+                        <input id=cd-ones data-denom="1.00" data-bind="value: cd_ones" type=number min="0" max="30" placeholder="quantity?" />
                         <div id="amt-cd-ones" class="amount" data-bind="visible: amtCdOnes() > 0">
                         	$<span data-bind="text: amtCdOnes().toFixed(2)"></span>
                         </div>
@@ -58,42 +58,42 @@
                 <ol>
                     <li>
                         <label for=cd-dollars>Dollars</label>
-                        <input id=cd-dollars data-bind="value: cd_dollars" type=number min="0" max="10" placeholder="quantity?" />
+                        <input id=cd-dollars data-denom="1.00" data-bind="value: cd_dollars" type=number min="0" max="10" placeholder="quantity?" />
                         <div id="amt-cd-dollars" class="amount" data-bind="visible: amtCdDollars() > 0">
                         	$<span data-bind="text: amtCdDollars().toFixed(2)"></span>
                         </div>
                     </li>
                     <li>
                         <label for=cd-half-dollars>Half Dollars</label>
-                        <input id=cd-half-dollars data-bind="value: cd_half_dollars" type=number min="0" max="10" placeholder="quantity?" />
+                        <input id=cd-half-dollars data-denom="0.50" data-bind="value: cd_half_dollars" type=number min="0" max="10" placeholder="quantity?" />
                         <div id="amt-cd-half-dollars" class="amount" data-bind="visible: amtCdHalfDollars() > 0">
                         	$<span data-bind="text: amtCdHalfDollars().toFixed(2)"></span>
                         </div>
                     </li>
                     <li>
                         <label for=cd-quarters>Quarters</label>
-                        <input id=cd-quarters data-bind="value: cd_quarters" type=number min="0" max="20" placeholder="quantity?" />
+                        <input id=cd-quarters data-denom="0.25" data-bind="value: cd_quarters" type=number min="0" max="20" placeholder="quantity?" />
                         <div id="amt-cd-quarters" class="amount" data-bind="visible: amtCdQuarters() > 0">
                         	$<span data-bind="text: amtCdQuarters().toFixed(2)"></span>
                         </div>
                     </li>
                     <li>
                         <label for=cd-dimes>Dimes</label>
-                        <input id=cd-dimes data-bind="value: cd_dimes" type=number min="0" max="40" placeholder="quantity?" />
+                        <input id=cd-dimes data-denom="0.10" data-bind="value: cd_dimes" type=number min="0" max="40" placeholder="quantity?" />
                         <div id="amt-cd-dimes" class="amount" data-bind="visible: amtCdDimes() > 0">
                         	$<span data-bind="text: amtCdDimes().toFixed(2)"></span>
                         </div>
                     </li>
                     <li>
                         <label for=cd-nickels>Nickels</label>
-                        <input id=cd-nickels data-bind="value: cd_nickels" type=number min="0" max="40" placeholder="quantity?" />
+                        <input id=cd-nickels data-denom="0.05" data-bind="value: cd_nickels" type=number min="0" max="40" placeholder="quantity?" />
                         <div id="amt-cd-nickels" class="amount" data-bind="visible: amtCdNickels() > 0">
                         	$<span data-bind="text: amtCdNickels().toFixed(2)"></span>
                         </div>
                     </li>
                     <li>
                         <label for=cd-pennies>Pennies</label>
-                        <input id=cd-pennies data-bind="value: cd_pennies" type=number min="0" max="40" placeholder="quantity?" />
+                        <input id=cd-pennies data-denom="0.01" data-bind="value: cd_pennies" type=number min="0" max="40" placeholder="quantity?" />
                         <div id="amt-cd-pennies" class="amount" data-bind="visible: amtCdPennies() > 0">
                         	$<span data-bind="text: amtCdPennies().toFixed(2)"></span>
                         </div>

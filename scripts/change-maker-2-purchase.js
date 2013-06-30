@@ -22,10 +22,10 @@ function processPayment(e) {
 	var changeAccume = 0.0;
 	
 	// Iterate over denominations in change drawer. This code is decoupled from references to specific denominations.
-	$('#cash-drawer input').each(function(index) {
-		var id = $(this).attr("id"); // id <- denomination name
-		var denomQty = parseInt($(this).val());
-		var denomVal = formatCurrencyCalc($(this).attr("data-denom"));
+	$('#cash-drawer li').each(function(index) {
+		var name = $(this > 'label').val(); // name <- denomination name
+		var denomQty = parseInt($(this > 'input').val());
+		var denomVal = formatCurrencyCalc($(this > 'input').attr("data-denom"));
 		var denomFactor = (Math.floor(changeBalRemain / denomVal));
 		
 		// Factor and accumulate quantities and amounts - basic idea: denomination factor * denomination value
