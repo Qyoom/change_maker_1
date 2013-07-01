@@ -62,6 +62,7 @@ function processPayment(e) {
 }
 
 function factorChangeRemitance(cost, payment) {
+	console.log("factorChangeRemitance TOP");
 	var changeDue = (payment >= cost) ? roundCurrencyCalcNum(payment - cost) : 0.00; // Round floats to two decimal places
 	
 	// Change accumulators	
