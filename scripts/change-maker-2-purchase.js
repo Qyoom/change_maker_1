@@ -100,5 +100,13 @@ function clearFields(e) {
 	// payment arrows
 	$('#exchange>table').find('input').val('');
 	self.viewModel.pay_twenty(0);
-	//console.log("self.viewModel.paymentAmt(): " + self.viewModel.paymentAmt());
+	self.viewModel.pay_ten(0);
+	self.viewModel.pay_five(0);
+	self.viewModel.pay_one(0);
+	self.viewModel.pay_dollar(0);
+	self.viewModel.pay_half_dollar(0);
+	self.viewModel.pay_quarter(0);
+	self.viewModel.pay_dime(0);
+	self.viewModel.pay_nickel(0);
+	self.viewModel.pay_penny(0);
 }
