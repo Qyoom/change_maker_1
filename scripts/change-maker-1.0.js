@@ -6,40 +6,40 @@ $(document).ready(function () {
 		var self = this;
 		
 		// Store cash drawer
-		this.cd_twenties = ko.observable();
-		this.cd_tens = ko.observable();
-		this.cd_fives = ko.observable();
-		this.cd_ones = ko.observable();
-		this.cd_dollars = ko.observable();
-		this.cd_half_dollars = ko.observable();
-		this.cd_quarters = ko.observable();
-		this.cd_dimes = ko.observable();
-		this.cd_nickels = ko.observable();
-		this.cd_pennies = ko.observable();
+		self.cd_twenties = ko.observable();
+		self.cd_tens = ko.observable();
+		self.cd_fives = ko.observable();
+		self.cd_ones = ko.observable();
+		self.cd_dollars = ko.observable();
+		self.cd_half_dollars = ko.observable();
+		self.cd_quarters = ko.observable();
+		self.cd_dimes = ko.observable();
+		self.cd_nickels = ko.observable();
+		self.cd_pennies = ko.observable();
 		
 		// Fill Wallet
-		this.w_twenties = ko.observable();
-		this.w_tens = ko.observable();
-		this.w_fives = ko.observable();
-		this.w_ones = ko.observable();
-		this.w_dollars = ko.observable();
-		this.w_half_dollars = ko.observable();
-		this.w_quarters = ko.observable();
-		this.w_dimes = ko.observable();
-		this.w_nickels = ko.observable();
-		this.w_pennies = ko.observable();
+		self.w_twenties = ko.observable();
+		self.w_tens = ko.observable();
+		self.w_fives = ko.observable();
+		self.w_ones = ko.observable();
+		self.w_dollars = ko.observable();
+		self.w_half_dollars = ko.observable();
+		self.w_quarters = ko.observable();
+		self.w_dimes = ko.observable();
+		self.w_nickels = ko.observable();
+		self.w_pennies = ko.observable();
 		
 		// Pay from Wallet
-		this.pay_twenty = ko.observable();
-		this.pay_ten = ko.observable();
-		this.pay_five = ko.observable();
-		this.pay_one = ko.observable();
-		this.pay_dollar = ko.observable();
-		this.pay_half_dollar = ko.observable();
-		this.pay_quarter = ko.observable();
-		this.pay_dime = ko.observable();
-		this.pay_nickel = ko.observable();
-		this.pay_penny = ko.observable();
+		self.pay_twenty = ko.observable();
+		self.pay_ten = ko.observable();
+		self.pay_five = ko.observable();
+		self.pay_one = ko.observable();
+		self.pay_dollar = ko.observable();
+		self.pay_half_dollar = ko.observable();
+		self.pay_quarter = ko.observable();
+		self.pay_dime = ko.observable();
+		self.pay_nickel = ko.observable();
+		self.pay_penny = ko.observable();
 		
 		/***** Denomination amounts - store cash drawer *****/
 		
@@ -160,39 +160,57 @@ $(document).ready(function () {
 			console.log("totalAmtWallet - total: " + total);
 			return total;
 		});
-	}
+		
+		// Bind payment and pay arrows
+		self.paymentAmt = ko.computed(function() {
+			console.log("paymentAmt TOP");
+			var total =
+				(self.pay_twenty() === undefined ? 0.0 : parseInt(self.pay_twenty()) * 20.00) +
+				(self.pay_ten() === undefined ? 0.0 : parseInt(self.pay_ten()) * 10.00) +
+				(self.pay_five() === undefined ? 0.0 : parseInt(self.pay_five()) * 5.00) +
+				(self.pay_one() === undefined ? 0.0 : parseInt(self.pay_one()) * 1.00) +
+				(self.pay_dollar() === undefined ? 0.0 : parseInt(self.pay_dollar()) * 1.00) +
+				(self.pay_half_dollar() === undefined ? 0.0 : parseInt(self.pay_half_dollar()) * 0.50) +
+				(self.pay_quarter() === undefined ? 0.0 : parseInt(self.pay_quarter()) * 0.25) +
+				(self.pay_dime() === undefined ? 0.0 : parseInt(self.pay_dime()) * 0.10) +
+				(self.pay_nickel() === undefined ? 0.0 : parseInt(self.pay_nickel()) * 0.05) +
+				(self.pay_penny() === undefined ? 0.0 : parseInt(self.pay_penny()) * 0.01);
+			console.log("paymentAmt - total: " + total);
+			return formatCurrencyPrint(total);
+		});
 	
-	/***** Calculate change *****/
-	
-	self.changeInTwenties = ko.computed(function() {
-	});
-	
-	self.changeInTens = ko.computed(function() {
-	});
-	
-	self.changeInFives = ko.computed(function() {
-	});
-	
-	self.changeInOnes = ko.computed(function() {
-	});
-	
-	self.changeInDollars = ko.computed(function() {
-	});
-	
-	self.changeInHalfDollars = ko.computed(function() {
-	});
-	
-	self.changeInQuarters = ko.computed(function() {
-	});
-	
-	self.changeInDimes = ko.computed(function() {
-	});
-	
-	self.changeInNickels = ko.computed(function() {
-	});
-	
-	self.changeInPennies = ko.computed(function() {
-	});
+		/***** Calculate change *****/
+		
+		self.changeInTwenties = ko.computed(function() {
+		});
+		
+		self.changeInTens = ko.computed(function() {
+		});
+		
+		self.changeInFives = ko.computed(function() {
+		});
+		
+		self.changeInOnes = ko.computed(function() {
+		});
+		
+		self.changeInDollars = ko.computed(function() {
+		});
+		
+		self.changeInHalfDollars = ko.computed(function() {
+		});
+		
+		self.changeInQuarters = ko.computed(function() {
+		});
+		
+		self.changeInDimes = ko.computed(function() {
+		});
+		
+		self.changeInNickels = ko.computed(function() {
+		});
+		
+		self.changeInPennies = ko.computed(function() {
+		});
+	} // End - ChangeMakerViewModel
 	
 	// Activate bindings
 	ko.applyBindings(new ChangeMakerViewModel());

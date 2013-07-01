@@ -293,7 +293,7 @@
                     </li>
                     <li>
                         <label for="payment"><span>Payment</span></label>
-                        <input id="payment" type="text" placeholder="$0.00"/>
+                        <input id="payment" data-bind="value: paymentAmt" type="text" placeholder="$0.00"/>
                     </li>
                     <li id="buttons">
                         <button onclick="processPayment(event)">Submit</button>
