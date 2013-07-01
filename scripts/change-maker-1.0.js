@@ -104,45 +104,52 @@ $(document).ready(function () {
 		/***** Denomination amounts - wallet *****/
 		
 		self.amtWTwenties = ko.computed(function() {
-			if(self.pay_twenty() !== undefined && self.pay_twenty() > self.w_twenties()) self.pay_twenty(self.w_twenties());
-			console.log("self.pay_twenty(): " + self.pay_twenty());
-			
+			if(self.pay_twenty() !== undefined && self.pay_twenty() > self.w_twenties()) self.pay_twenty(self.w_twenties());			
 		   	return self.w_twenties() === undefined ? 0.0 : parseInt(self.w_twenties()) * 20.00;
 		});
 		
 		self.amtWTens = ko.computed(function() {
+			if(self.pay_ten() !== undefined && self.pay_ten() > self.w_tens()) self.pay_ten(self.w_tens());
 		   	return self.w_tens() === undefined ? 0.0 : parseInt(self.w_tens()) * 10.00;
 		});
 		
 		self.amtWFives = ko.computed(function() {
+			if(self.pay_five() !== undefined && self.pay_five() > self.w_fives()) self.pay_five(self.w_fives());
 		   	return self.w_fives() === undefined ? 0.0 : parseInt(self.w_fives()) * 5.00;
 		});
 		
 		self.amtWOnes = ko.computed(function() {
+			if(self.pay_one() !== undefined && self.pay_one() > self.w_ones()) self.pay_one(self.w_ones());
 		   	return self.w_ones() === undefined ? 0.0 : parseInt(self.w_ones()) * 1.00;
 		});
 		
 		self.amtWDollars = ko.computed(function() {
+			if(self.pay_dollar() !== undefined && self.pay_dollar() > self.w_dollars()) self.pay_dollar(self.w_dollars());
 		   	return self.w_dollars() === undefined ? 0.0 : parseInt(self.w_dollars()) * 1.00;
 		});
 		
 		self.amtWHalfDollars = ko.computed(function() {
+			if(self.pay_half_dollar() !== undefined && self.pay_half_dollar() > self.w_half_dollars()) self.pay_half_dollar(self.w_half_dollars());
 		   	return self.w_half_dollars() === undefined ? 0.0 : parseInt(self.w_half_dollars()) * 0.50;
 		});
 		
 		self.amtWQuarters = ko.computed(function() {
+			if(self.pay_quarter() !== undefined && self.pay_quarter() > self.w_quarters()) self.pay_quarter(self.w_quarters());
 		   	return self.w_quarters() === undefined ? 0.0 : parseInt(self.w_quarters()) * 0.25;
 		});
 		
 		self.amtWDimes = ko.computed(function() {
+			if(self.pay_dime() !== undefined && self.pay_dime() > self.w_dimes()) self.pay_dime(self.w_dimes());
 		   	return self.w_dimes() === undefined ? 0.0 : parseInt(self.w_dimes()) * 0.10;
 		});
 		
 		self.amtWNickels = ko.computed(function() {
+			if(self.pay_nickel() !== undefined && self.pay_nickel() > self.w_nickels()) self.pay_nickel(self.w_nickels());
 		   	return self.w_nickels() === undefined ? 0.0 : parseInt(self.w_nickels()) * 0.05;
 		});
 		
 		self.amtWPennies = ko.computed(function() {
+			if(self.pay_penny() !== undefined && self.pay_penny() > self.w_pennies()) self.pay_penny(self.w_pennies());
 		   	return self.w_pennies() === undefined ? 0.0 : parseInt(self.w_pennies()) * 0.01;
 		});
 		
