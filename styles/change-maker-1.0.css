@@ -28,7 +28,7 @@ form#exchange {
 }
 
 form#exchange table {
-	padding-top:80px;
+	padding-top:76px;
 	width:100%;
 }
 
@@ -49,8 +49,8 @@ form#exchange table td {
 form#exchange table td.pay {
 	background-image:url(../images/left_arrow_lite.png);
 	padding-left:5px;
-	padding-bottom:5px;
-	padding-top:5px;
+	padding-bottom:3px;
+	padding-top:4px;
 	float:right;
 }
 
