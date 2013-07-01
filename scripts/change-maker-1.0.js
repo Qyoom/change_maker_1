@@ -176,7 +176,8 @@ $(document).ready(function () {
 				(self.pay_nickel() === undefined ? 0.0 : parseInt(self.pay_nickel()) * 0.05) +
 				(self.pay_penny() === undefined ? 0.0 : parseInt(self.pay_penny()) * 0.01);
 			console.log("paymentAmt - total: " + total);
-			return formatCurrencyPrint(total);
+			if(total == 0) return ""; // display placeholder
+			else return formatCurrencyPrint(total);
 		});
 	
 		/***** Calculate change *****/

@@ -90,7 +90,8 @@ function stringifyChange(changeAccumeDenoms, changeAccumeSum) {
 	return result;
 }
 
-function clearFields() {
+function clearFields(e) {
+	e.preventDefault();
 	$("#cost").val('');
 	$("#payment").val('');
 	$('#changeInDenoms').text('');
