@@ -104,6 +104,9 @@ $(document).ready(function () {
 		/***** Denomination amounts - wallet *****/
 		
 		self.amtWTwenties = ko.computed(function() {
+			if(self.pay_twenty() !== undefined && self.pay_twenty() > self.w_twenties()) self.pay_twenty(self.w_twenties());
+			console.log("self.pay_twenty(): " + self.pay_twenty());
+			
 		   	return self.w_twenties() === undefined ? 0.0 : parseInt(self.w_twenties()) * 20.00;
 		});
 		
