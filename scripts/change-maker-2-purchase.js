@@ -51,7 +51,7 @@ function factorChangeRemitance(cost, payment) {
 	console.log("changeDue: " + changeDue + " | changeInDenoms: " + changeInDenoms + 
 		" | changeBalRemain (" + changeBalRemain + ") < 0.01 ? " + (changeBalRemain < 0.01) + " | changeAccume: " + changeAccume);
 	// UI display
-	$('#changeInDenoms').text(stringifyChange(changeInDenoms, changeAccume));
+	$('#changeInDenoms').text(formatDisplayChange(changeInDenoms, changeAccume));
 	$('#chgDue').text("Change due: " + formatCurrencyPrint(changeDue));
 	// Determine is store drawer has enough to make change
 	if((roundCurrencyCalcNum(changeBalRemain)) >= 0.01) {
@@ -84,16 +84,33 @@ function formatCurrencyPrint(num) {
 }
 
 // Convert collected data to readable message
-function stringifyChange(changeAccumeDenoms, changeAccumeSum) {
+function formatDisplayChange(changeAccumeDenoms, changeAccumeSum) {
 	var result = "";
 	if(changeAccumeDenoms.length == 0) return result;
 	else result = result.concat("Change returned (" + formatCurrencyPrint(changeAccumeSum) + "): ");
-	var denom = 0, qty = 1;
 	for(var i = 0; i < changeAccumeDenoms.length; i++) {
-		result = result.concat(changeAccumeDenoms[i][denom], ": ", changeAccumeDenoms[i][qty]);
+		var denom = changeAccumeDenoms[i][0];
+		var qty = changeAccumeDenoms[i][1];
+		result = result.concat(denom, ": ", qty);
 		if(i < changeAccumeDenoms.length - 1) result = result.concat(", ");
+		invokeChangeArrow(denom, qty);
 	}
 	return result;
+}
+
+function invokeChangeArrow(denom, qty) {
+	if(denom == "Penny") denom = "Pennies";
+	denom = "changeIn" + denom.replace(/ /g,'');
+	if(denom == "Twenties") self.viewModel.changeInTwenties(qty);
+	if(denom == "Tens") self.viewModel.changeInTens(qty);
+	if(denom == "Fives") self.viewModel.changeInFives(qty);
+	if(denom == "Ones") self.viewModel.changeInOnes(qty);
+	if(denom == "Dollars") self.viewModel.changeInDollars(qty);
+	if(denom == "HalfDollars") self.viewModel.changeInHalfDollars(qty);
+	if(denom == "Quarters") self.viewModel.changeInQuarters(qty);
+	if(denom == "Dimes") self.viewModel.changeInDimes(qty);
+	if(denom == "Nickels") self.viewModel.changeInNickels(qty);
+	if(denom == "Pennies") self.viewModel.changeInPennies(qty);
 }
 
 function clearFields(e) {

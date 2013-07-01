@@ -41,6 +41,19 @@ $(document).ready(function () {
 		self.pay_nickel = ko.observable();
 		self.pay_penny = ko.observable();
 		
+		// Change
+		
+		self.changeInTwenties = ko.observable();
+		self.changeInTens = ko.observable();
+		self.changeInFives = ko.observable();
+		self.changeInOnes = ko.observable();
+		self.changeInDollars = ko.observable();
+		self.changeInHalfDollars = ko.observable();
+		self.changeInQuarters = ko.observable();
+		self.changeInDimes = ko.observable();
+		self.changeInNickels = ko.observable();
+		self.changeInPennies = ko.observable();
+		
 		/***** Denomination amounts - store cash drawer *****/
 		
 		self.amtCdTwenties = ko.computed(function() {
@@ -188,38 +201,6 @@ $(document).ready(function () {
 			console.log("paymentAmt - total: " + total);
 			if(total == 0) return ""; // display placeholder
 			else return formatCurrencyPrint(total);
-		});
-	
-		/***** Calculate change *****/
-		
-		self.changeInTwenties = ko.computed(function() {
-		});
-		
-		self.changeInTens = ko.computed(function() {
-		});
-		
-		self.changeInFives = ko.computed(function() {
-		});
-		
-		self.changeInOnes = ko.computed(function() {
-		});
-		
-		self.changeInDollars = ko.computed(function() {
-		});
-		
-		self.changeInHalfDollars = ko.computed(function() {
-		});
-		
-		self.changeInQuarters = ko.computed(function() {
-		});
-		
-		self.changeInDimes = ko.computed(function() {
-		});
-		
-		self.changeInNickels = ko.computed(function() {
-		});
-		
-		self.changeInPennies = ko.computed(function() {
 		});
 	} // End - ChangeMakerViewModel
 	
