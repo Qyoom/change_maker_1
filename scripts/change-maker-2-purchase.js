@@ -97,4 +97,8 @@ function clearFields(e) {
 	$('#changeInDenoms').text('');
 	$("#chgDue").text('');
 	$('#error').text('');
+	// payment arrows
+	$('#exchange>table').find('input').val('');
+	self.viewModel.pay_twenty(0);
+	//console.log("self.viewModel.paymentAmt(): " + self.viewModel.paymentAmt());
 }

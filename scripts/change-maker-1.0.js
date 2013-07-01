@@ -224,5 +224,7 @@ $(document).ready(function () {
 	} // End - ChangeMakerViewModel
 	
 	// Activate bindings
-	ko.applyBindings(new ChangeMakerViewModel());
+	viewModel = new ChangeMakerViewModel();
+	ko.applyBindings(viewModel);
 });
+var viewModel;
