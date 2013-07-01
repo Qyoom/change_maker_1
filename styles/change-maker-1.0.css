@@ -57,7 +57,6 @@ form#exchange table td.pay {
 form#exchange input[type=number] {
 	width:36px;
 	margin-left:9px;
-	/*margin-top:5px;*/
 	border-style:solid;
 	border-width:medium;
 	/*border-color:#cc9900; Use this for hover and active*/
@@ -137,12 +136,13 @@ div#ui-container {
 }
 
 form ol li {
-	background: #b9cf6a;
-	background: rgba(255,255,255,.3);
-	line-height: 24px;
-	list-style: none;
-	padding: 5px 10px;
-	margin-bottom: 2px;
+	background:#b9cf6a;
+	background:rgba(255,255,255,.3);
+	line-height:24px;
+	min-height:24px;
+	list-style:none;
+	padding:5px 10px;
+	margin-bottom:2px;
 }
 
 form ol li input[type=number]{
@@ -151,7 +151,7 @@ form ol li input[type=number]{
 
 form div.amount {
 	display:inline-block;
-	color: #384313;
+	color:#384313;
 	font-size:13px;
 	float:right;
 }
@@ -168,4 +168,10 @@ form fieldset {
 
 #error {
 	color:#D00;	
+}
+
+#payment {
+	display:inline-block;
+	color: #384313;
+	font-size:13px;
 }

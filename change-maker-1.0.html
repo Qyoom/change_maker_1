@@ -292,8 +292,10 @@
                         <input id="cost" type="text" placeholder="$0.00" />
                     </li>
                     <li>
-                        <label for="payment"><span>Payment</span></label>
-                        <input id="payment" data-bind="value: paymentAmt" type="text" placeholder="$0.00"/>
+                        <label for="payment"><span>Payment</span></label>                        
+                        <div id="payment" data-bind="visible: paymentAmt() > 0">
+                        	$<span data-bind="text: paymentAmt()"></span>
+                        </div>
                     </li>
                     <li id="buttons">
                         <button onclick="processPayment(event)">Submit</button>
