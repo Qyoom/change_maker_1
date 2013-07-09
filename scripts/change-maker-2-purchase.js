@@ -6,8 +6,8 @@ function processPayment(e) {
 	e.preventDefault();
 	console.log("processPayment TOP");
 	
-	var cost = formatCurrencyCalcStr($("#cost").val());
-	var payment = formatCurrencyCalcStr($("#payment>span").text());
+	var cost = roundCurrencyCalc($("#cost").val());
+	var payment = roundCurrencyCalc($("#payment>span").text());
 	
 	if(payment < cost) {
 		$('#error').text('Payment is less than the cost.');
@@ -19,7 +19,7 @@ function processPayment(e) {
 
 function factorChangeRemitance(cost, payment) {
 	console.log("factorChangeRemitance TOP");
-	var changeDue = (payment >= cost) ? roundCurrencyCalcNum(payment - cost) : 0.00; // Round floats to two decimal places
+	var changeDue = (payment >= cost) ? roundCurrencyCalc(payment - cost) : 0.00; // Round floats to two decimal places
 	
 	// Change accumulators	
 	var changeBalRemain = changeDue;
@@ -31,9 +31,9 @@ function factorChangeRemitance(cost, payment) {
 		// "this" is the object of the current iteration
 		var name = $(this).children("label:first").text(); // name <- denomination name
 		var denomQty = parseInt($(this).children("input:first").val());
-		var denomVal = formatCurrencyCalcStr($(this).children("input:first").attr("data-denom"));
+		var denomVal = roundCurrencyCalc($(this).children("input:first").attr("data-denom"));
 		// Determine how many times this denomination can fit into the remaining balance
-		changeBalRemain = roundCurrencyCalcNum(changeBalRemain);
+		changeBalRemain = roundCurrencyCalc(changeBalRemain);
 		var denomFactor = (Math.floor(changeBalRemain / denomVal));
 		
 		// Factor and accumulate quantities and amounts - basic idea: denomination factor * denomination value
@@ -52,8 +52,8 @@ function factorChangeRemitance(cost, payment) {
 	// UI display
 	$('#changeInDenoms').text(formatDisplayChange(changeInDenoms, changeAccume));
 	$('#chgDue').text("Change due: " + formatCurrencyPrint(changeDue));
-	// Determine is store drawer has enough to make change
-	if((roundCurrencyCalcNum(changeBalRemain)) >= 0.01) {
+	// Determine if store drawer has enough to make change
+	if((roundCurrencyCalc(changeBalRemain)) >= 0.01) {
 		$('#error').text("Unable to process transaction‒store does not have enough change!");
 	}
 	else {
@@ -65,14 +65,8 @@ function factorChangeRemitance(cost, payment) {
 } // End - factorChangeRemitance
 
 // Maintain two decimal places for float calc
-function roundCurrencyCalcNum(num) {
+function roundCurrencyCalc(num) {
 	var result = Math.round(parseFloat(num) * 100) / 100;
-	return result;
-}
-
-// Maintain two decimal place formatting for floats from strings
-function formatCurrencyCalcStr(str) {
-	var result = Math.round(parseFloat(str) * 100) / 100;
 	return result;
 }
 
